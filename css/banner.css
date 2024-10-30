@@ -1,0 +1,13 @@
+:root {
+    --dark: #323437;
+    --white: #fff;
+    --primaryColor: #FFC100;
+    --black: #000;
+    --blue: #476AD2;
+}
+
+#section{
+    width: 100vw;
+    height: 500px;
+    background-color: var(--blue);
+}
