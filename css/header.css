@@ -174,3 +174,20 @@ nav ul li:hover{
         transform-origin: left center;
     }
 }
+
+@media(max-width:500px){
+    #logo-img {
+        width: 65px;
+        height: 65px;
+    }
+    #logo-text h1{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:400px){
+    header{
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+}
