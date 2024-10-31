@@ -9,15 +9,8 @@
     --blue: #476AD2;
 }
 
-:root {
-    --dark: #323437;
-    --white: #fff;
-    --primaryColor: #FFC100;
-    --black: #000;
-}
-
 .light-theme {
-    --bg: var(var(--white));
+    --bg: var(--white);
     --color: var(--black);
 }
 
@@ -26,21 +19,8 @@
     --color: var(--white);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-}
-
-body {
-    background: var(--bg);
-    font-family: 'JetBrains Mono';
-    color: var(--color);
-}
-
 header {
-    max-width: 1700px;
+    max-width: 1850px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -107,7 +87,7 @@ nav ul li{
 
 nav ul li:hover{
     cursor: pointer;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--color);
 }
 
 #checkbox {
@@ -130,7 +110,8 @@ nav ul li:hover{
         position: absolute;
         top: 100px;
         right: 60px;
-        height: 134px;
+        height: fit-content;
+        padding-bottom: 5px;
         flex-direction: column;
         align-items: start;
         margin-right: 0px;

@@ -6,6 +6,29 @@
     --blue: #476AD2;
 }
 
+
+.light-theme {
+    --bg: var(--white);
+    --color: var(--black);
+}
+
+.dark-theme {
+    --bg: var(--dark);
+    --color: var(--white);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+    background: var(--bg);
+    font-family: 'JetBrains Mono';
+    color: var(--color);
+}
+
 #theme-switch {
     position: fixed;
     transition: background 0.3s ease;
