@@ -14,8 +14,8 @@ switchTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
     let className = document.body.className;
     if (className == 'light-theme') {
-        switchTheme.style.backgroundImage = 'url("../images/sun.png")';
+        switchTheme.src = "../images/sun.png";
     } else {
-        switchTheme.style.backgroundImage = 'url("../images/moon.png")';
+        switchTheme.src = "../images/moon.png";
     }
 })

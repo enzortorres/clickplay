@@ -32,12 +32,14 @@ body {
 #theme-switch {
     position: fixed;
     transition: background 0.3s ease;
-    background: url("../images/sun.png") no-repeat;
-    background-size: contain;
-    background-position: center;
+    mix-blend-mode: difference;
     cursor: pointer;
     bottom: 10px;
     left: 10px;
     width: 35px;
     height: 35px;
+}
+
+span {
+    color: var(--primaryColor);
 }

@@ -9,6 +9,10 @@
     --blue: #476AD2;
 }
 
+body:-moz-window-inactive {
+    filter: brightness(10);
+}
+
 .light-theme {
     --bg: var(--white);
     --secondaryBg: var(--dark);
