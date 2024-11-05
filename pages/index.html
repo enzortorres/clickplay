@@ -16,20 +16,30 @@
 
     <!-- !Header -->
     <header>
-        <div id="logo">
-            <img src="../images/logo.png" id="logo-img">
-            <div id="logo-text">
-                <h1>CLICK<span>PLAY</span></h1>
-                <p>CLIQUE E JOGUE</p>
+        <a href="#">
+            <div id="logo">
+                <img src="../images/logo.png" id="logo-img">
+                <div id="logo-text">
+                    <h1>CLICK<span>PLAY</span></h1>
+                    <p>CLIQUE E JOGUE</p>
+                </div>
             </div>
-        </div>
+        </a>
         
         <nav class="nav">
             <ul class="ulNav">
-                <li>sobre</li>
-                <li>jogos</li>
-                <li>suporte</li>
-                <li>sugestões</li>
+                <a href="#">
+                    <li>sobre</li>
+                </a>
+                <a href="#">
+                    <li>jogos</li>
+                </a>
+                <a href="#">
+                    <li>suporte</li>
+                </a>
+                <a href="#">
+                    <li>sugestões</li>
+                </a>
             </ul>
         </nav>
         <input type="checkbox" id="checkbox">
@@ -58,7 +68,7 @@
     <main>
         <h1 id="tituloJogos">JOGOS</h1>
         <!-- !Jogo das palavras -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerTextoJogos">
                 <div class="containerSecundarioTextoJogos">
                     <h1>Jogo das Palavras</h1>
@@ -72,7 +82,7 @@
         </div>
 
         <!-- !Jogo da Velha -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerLogoJogos jogoVelha">
                 
             </div>
@@ -86,7 +96,7 @@
         </div>
 
         <!-- !Jogo Pedra Papel Tesoura -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerTextoJogos">
                 <div class="containerSecundarioTextoJogos">
                     <h1>Pedra, Papel ou Tesoura</h1>
@@ -100,7 +110,7 @@
         </div>
 
         <!-- !Jogo da Memória -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerLogoJogos jogoMemoria">
                 
             </div>
@@ -114,7 +124,7 @@
         </div>
 
         <!-- !Jogo de Digitação -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerTextoJogos">
                 <div class="containerSecundarioTextoJogos">
                     <h1>Speed Type</h1>
@@ -128,7 +138,7 @@
         </div>
 
         <!-- !Teste de clique -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerLogoJogos jogoClique">
                 
             </div>
@@ -146,11 +156,11 @@
     <img src="../images/sun.png" id="theme-switch"><img>
     <footer>
         <div class="container-footer">
-            <div class="logo-footer-container">
+            <div class="logo-footer-container hidden">
                 <p>CLICK<span>PLAY</span></p>
             </div>
             <div class="nav-footer-container">
-                <ul>
+                <ul class="hidden">
                     <li>Publicação</li>
                     <li>Nossa história</li>
                     <li>Jogos</li>
@@ -161,7 +171,7 @@
             </div>
 
             <div class="social-footer-container">
-                <ul>
+                <ul class="hidden">
                     <li><img src="../images/icos/twitter.svg" class="redes-sociais"></li>
                     <li><img src="../images/icos/facebook.svg" class="redes-sociais"></li>
                     <li><img src="../images/icos/youtube.svg" class="redes-sociais"></li>
@@ -174,7 +184,7 @@
             </div>
 
             <div class="terms-footer-container">
-                <ul>
+                <ul class="hidden">
                     <li>Termos e Condições</li>
                     <li>Política de Privacidade</li>
                     <li>Política de Conteúdo e Conduta</li>

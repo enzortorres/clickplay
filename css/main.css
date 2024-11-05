@@ -46,27 +46,27 @@
 }
 
 .jogoPalavras{
-    background-image: url(../images/P\ A\ L\ A\ V\ R\ A\ S.png);
+    background-image: url(../images/banner-games/palavras.png);
 }
 
 .jogoVelha{
-    background-image: url(../images/jogodavelha.webp);
+    background-image: url(../images/banner-games/jogodavelha.webp);
 }
 
 .pedraPapelTesoura{
-    background-image: url(../images/jokenpo.png);
+    background-image: url(../images/banner-games/jokenpo.png);
 }
 
 .jogoMemoria{
-    background-image: url(../images/jogoMemoria.png);
+    background-image: url(../images/banner-games/jogoMemoria.png);
 }
 
 .jogoDigitacao{
-    background-image: url(../images/speedtype.png);
+    background-image: url(../images/banner-games/speedtype.png);
 }
 
 .jogoClique{
-    background-image: url(../images/clicktest.png);
+    background-image: url(../images/banner-games/clicktest.png);
 }
 
 .containerSecundarioTextoJogos{

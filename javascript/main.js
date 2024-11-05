@@ -1,7 +1,6 @@
-const switchTheme = document.getElementById('theme-switch');
-const checkbox = document.getElementById('checkbox');
+//!Menu Responsivo
 const nav = document.querySelector('.ulNav')
-
+const checkbox = document.getElementById('checkbox');
 checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
         nav.classList.toggle('active');
@@ -10,6 +9,8 @@ checkbox.addEventListener('change', () => {
     }
 });
 
+//!Tema claro/escuro
+const switchTheme = document.getElementById('theme-switch');
 switchTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
     let className = document.body.className;
@@ -19,3 +20,18 @@ switchTheme.addEventListener('click', () => {
         switchTheme.src = "../images/moon.png";
     }
 })
+
+//!Efeito fadein
+const observador = new IntersectionObserver ( (evento) => {
+    evento.forEach( (ev) => {
+        if(ev.isIntersecting){
+            ev.target.classList.add('show')
+        } else{
+            ev.target.classList.remove('show')
+        }
+    })
+})
+const elements = document.querySelectorAll('.hidden')
+elements.forEach((elements) => observador.observe(elements))
+
+

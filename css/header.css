@@ -9,10 +9,6 @@
     --blue: #476AD2;
 }
 
-body:-moz-window-inactive {
-    filter: brightness(10);
-}
-
 .light-theme {
     --bg: var(--white);
     --secondaryBg: var(--dark);
@@ -25,6 +21,10 @@ body:-moz-window-inactive {
     --secondaryBg: var(--white);
     --colorHeader: var(--white);
     --secondaryColor: var(--black);
+}
+
+a{
+    text-decoration: none;
 }
 
 header {
@@ -41,7 +41,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    cursor: default;
+    cursor: pointer;
 }
 
 #logo-img {
@@ -90,9 +90,13 @@ nav ul {
 }
 
 nav ul li{
-    color: var(--secondaryColor);
+    color: var(--colorHeader);
     border-bottom: 1px solid rgba(255, 255, 255, 0);
     transition: border-bottom 0.2s linear;
+}
+
+nav ul li:hover{
+    border-bottom: 1px solid var(--colorHeader);
 }
 
 
@@ -113,23 +117,24 @@ nav ul li{
     }
 
     .ulNav{
-        gap: 20px;
-        position: absolute;
+        width: 150px;
+        height: fit-content;
         top: 90px;
         right: 70px;
-        height: fit-content;
-        padding-bottom: 5px;
+        background-color: var(--secondaryBg);
+        position: absolute;
         flex-direction: column;
         align-items: start;
+        gap: 20px;
         margin-right: 0px;
-        background-color: var(--secondaryBg);
-        color: var(--secondaryColor);
         border-radius: 15px 0px 15px 15px;
-        width: 150px;
-        padding-left: 10px;
-        padding-top: 5px;
-        transform: scale(0%);
+        padding: 5px 0px 6px 10px;
         transition: transform 0s;
+        transform: scale(0%);
+    }
+
+    nav ul li{
+        color: var(--secondaryColor);
     }
     
     .ulNav li:hover {
