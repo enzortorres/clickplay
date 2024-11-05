@@ -1,0 +1,136 @@
+#tituloJogos{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #3e3e3e;
+}
+
+.containerJogos{
+    width: 1400px;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.containerTextoJogos{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLogoJogos{
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/P\ A\ L\ A\ V\ R\ A\ S.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.containerSecundarioTextoJogos{
+    width: 90%;
+    position: relative;
+}
+
+.containerSecundarioTextoJogos h1{
+    color: #3e3e3e;
+    text-align: right;
+    font-size: 35px;
+}
+
+.containerSecundarioTextoJogos p{
+    color: #3e3e3e;
+    text-align: right;
+    font-size: 1.2em;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.btnJogos{
+    position: absolute;
+    right: 0;
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #FFC100;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.101);
+    transition:  0.3s ease;
+}
+
+.btnJogos:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+@media(max-width:1470px){
+    .containerJogos{
+        width: 90%;
+        height: 300px;
+    }
+}
+
+@media(max-width:1320px){
+    .containerSecundarioTextoJogos p{
+        font-size: 0.95em;
+    }
+}
+
+@media(max-width:1100px){
+    .containerLogoJogos{
+        width: 500px;
+        height: 50%;
+        order: 1;
+    }
+    .containerTextoJogos{
+        width: 500px;
+        height: 50%;
+        order: 2;
+    }
+    .containerSecundarioTextoJogos p{
+        text-align: start;
+    }
+
+    .containerSecundarioTextoJogos h1{
+        text-align: start;
+    }
+
+    .containerJogos{
+        width: 500px;
+        height: 600px;
+        flex-wrap: wrap;
+    }
+
+    .btnJogos{
+        position: relative;
+        display: block;
+    }
+}
+
+@media(max-width: 590px){
+    .containerJogos{
+        width: 400px;
+        height: 500px;
+    }
+
+    .containerSecundarioTextoJogos h1{
+        font-size: 30px;
+    }
+
+    .containerLogoJogos{
+        height: 40%;
+    }
+
+    .containerTextoJogos{
+        height: 60%;
+        align-items: start;
+        margin-top: 20px;
+    }
+}
