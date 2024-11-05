@@ -1,16 +1,29 @@
+:root {
+    --dark: #323437;
+    --white: #fff;
+}
+
+.light-theme {
+    --color: var(--dark);
+}
+
+.dark-theme {
+    --color: var(--white);
+}
+
 #tituloJogos{
     font-size: 40px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 50px;
-    color: #3e3e3e;
+    color: var(color);
 }
 
 .containerJogos{
     width: 1400px;
     height: 350px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     display: flex;
 }
 
@@ -25,10 +38,32 @@
 .containerLogoJogos{
     width: 50%;
     height: 100%;
-    background-image: url(../images/P\ A\ L\ A\ V\ R\ A\ S.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
 
+.jogoPalavras{
+    background-image: url(../images/P\ A\ L\ A\ V\ R\ A\ S.png);
+}
+
+.jogoVelha{
+    background-image: url(../images/jogodavelha.webp);
+}
+
+.pedraPapelTesoura{
+    background-image: url(../images/jokenpo.png);
+}
+
+.jogoMemoria{
+    background-image: url(../images/jogoMemoria.png);
+}
+
+.jogoDigitacao{
+    background-image: url(../images/speedtype.png);
+}
+
+.jogoClique{
+    background-image: url(../images/clicktest.png);
 }
 
 .containerSecundarioTextoJogos{
@@ -37,17 +72,25 @@
 }
 
 .containerSecundarioTextoJogos h1{
-    color: #3e3e3e;
+    color: var(color);
     text-align: right;
     font-size: 35px;
 }
 
 .containerSecundarioTextoJogos p{
-    color: #3e3e3e;
+    color: var(color);
     text-align: right;
     font-size: 1.2em;
     padding-top: 30px;
     padding-bottom: 40px;
+}
+
+.leftTexto h1{
+    text-align: start;
+}
+
+.leftTexto p{
+    text-align: start;
 }
 
 .btnJogos{
@@ -63,6 +106,10 @@
     font-size: 16px;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.101);
     transition:  0.3s ease;
+}
+
+.btnStart{
+    position: relative;
 }
 
 .btnJogos:hover{
@@ -86,13 +133,16 @@
 @media(max-width:1100px){
     .containerLogoJogos{
         width: 500px;
-        height: 50%;
+        height: 45%;
         order: 1;
     }
     .containerTextoJogos{
         width: 500px;
-        height: 50%;
+        height: 55%;
         order: 2;
+        align-items: start;
+        justify-content: start;
+        margin-top: 30px;
     }
     .containerSecundarioTextoJogos p{
         text-align: start;
@@ -100,12 +150,14 @@
 
     .containerSecundarioTextoJogos h1{
         text-align: start;
+        font-size: 30px;
     }
 
     .containerJogos{
         width: 500px;
         height: 600px;
         flex-wrap: wrap;
+        margin-bottom: 0px;
     }
 
     .btnJogos{
@@ -132,5 +184,11 @@
         height: 60%;
         align-items: start;
         margin-top: 20px;
+    }
+}
+
+@media(max-width: 450px){
+    .containerJogos{
+        width: 350px;
     }
 }
