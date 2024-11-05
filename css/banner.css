@@ -8,12 +8,12 @@
 
 .light-theme {
     --bg: var(--white);
-    --color: var(--black);
+    --color-banner: var(--black);
 }
 
 .dark-theme {
     --bg: var(--dark);
-    --color: var(--white);
+    --color-banner: var(--white);
 }
 
 #section-banner{

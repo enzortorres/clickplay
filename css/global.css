@@ -9,12 +9,12 @@
 
 .light-theme {
     --bg: var(--white);
-    --color: var(--black);
+    --color-main: var(--black);
 }
 
 .dark-theme {
     --bg: var(--dark);
-    --color: var(--white);
+    --color-main: var(--white);
 }
 
 * {
@@ -26,7 +26,6 @@
 body {
     background: var(--bg);
     font-family: 'JetBrains Mono';
-    color: var(--color);
 }
 
 #theme-switch {

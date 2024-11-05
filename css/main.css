@@ -1,14 +1,17 @@
 :root {
     --dark: #323437;
     --white: #fff;
+    --primaryColor: #FFC100;
+    --black: #000000;
+    --blue: #476AD2;
 }
 
 .light-theme {
-    --color: var(--dark);
+    --color-main: var(--dark);
 }
 
 .dark-theme {
-    --color: var(--white);
+    --color-main: var(--white);
 }
 
 #tituloJogos{
@@ -16,7 +19,7 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 50px;
-    color: var(--color);
+    color: var(--color-main);
 }
 
 .containerJogos{
@@ -72,13 +75,13 @@
 }
 
 .containerSecundarioTextoJogos h1{
-    color: var(color);
+    color: var(--color-main);
     text-align: right;
     font-size: 35px;
 }
 
 .containerSecundarioTextoJogos p{
-    color: var(--color);
+    color: var(--color-main);
     text-align: right;
     font-size: 1.2em;
     padding-top: 30px;
@@ -100,8 +103,8 @@
     height: 50px;
     border-radius: 5px;
     border: 0px;
-    background-color: #FFC100;
-    color: white;
+    background-color: var(--primaryColor);
+    color: var(--white);
     font-weight: bold;
     font-size: 16px;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.101);
