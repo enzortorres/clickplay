@@ -36,14 +36,16 @@ elements.forEach((elements) => observador.observe(elements))
 //!Alerta ao clicar em alguma âncora
 const anchors = document.querySelectorAll('.anchors');
 const errorMessage = document.querySelector('.error');
+let timeoutId;
 
 anchors.forEach(anchor => {
     anchor.addEventListener('click', (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        clearTimeout(timeoutId);
         errorMessage.style.opacity = '1';
 
-        setTimeout(() => {
+        timeoutId = setTimeout(() => {
             errorMessage.style.opacity = '0';
-        }, 2000);
+        }, 3000);
     });
 });

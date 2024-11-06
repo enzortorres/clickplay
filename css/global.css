@@ -56,7 +56,7 @@ span {
 }
 
 .error {
-    width: 20vw;
+    width: 380px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -67,11 +67,11 @@ span {
     border: 1px solid red;
     color: red;
     font-size: 18px;
-    position: fixed;
     z-index: 100;
+    opacity: 0;
+    position: fixed;
     left: 50%;
     top: 50px;
-    opacity: 0;
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
 }

@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --dark: #323437;
+    --white: #fff;
+    --primaryColor: #FFC100;
+    --black: #000;
+    --blue: #476AD2;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --secondaryBg: var(--dark);
+    --colorHeader: var(--black);
+    --secondaryColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--dark);
+    --secondaryBg: var(--white);
+    --colorHeader: var(--white);
+    --secondaryColor: var(--black);
+}
+
+header a img {
+    width: 50px;
+    height: 50px;
+}
+
+#return {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#help {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#reset {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+}
