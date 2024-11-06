@@ -54,3 +54,24 @@ span {
     transform: scale(1);
     transition: all 1.2s;
 }
+
+.error {
+    width: 20vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: #fd8977;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid red;
+    color: red;
+    font-size: 18px;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    top: 50px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}

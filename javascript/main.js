@@ -35,3 +35,17 @@ const elements = document.querySelectorAll('.hidden')
 elements.forEach((elements) => observador.observe(elements))
 
 
+//!Alerta ao clicar em alguma âncora
+const anchors = document.querySelectorAll('a');
+const errorMessage = document.querySelector('.error');
+
+anchors.forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+        e.preventDefault()
+        errorMessage.style.opacity = '1';
+
+        setTimeout(() => {
+            errorMessage.style.opacity = '0';
+        }, 2000);
+    });
+});
