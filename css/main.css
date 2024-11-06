@@ -1,23 +1,25 @@
 :root {
     --dark: #323437;
-    --white: #fff;
+    --white: #eeeeee;
     --primaryColor: #FFC100;
     --black: #000000;
     --blue: #476AD2;
 }
 
 .light-theme {
-    --color-main: var(--dark);
+    --bg: var(--white);
+    --color-main: var(--black);
 }
 
 .dark-theme {
+    --bg: var(--dark);
     --color-main: var(--white);
 }
 
 #tituloJogos{
     font-size: 40px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 50px;
     color: var(--color-main);
 }

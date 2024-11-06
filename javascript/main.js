@@ -26,8 +26,6 @@ const observador = new IntersectionObserver ( (evento) => {
     evento.forEach( (ev) => {
         if(ev.isIntersecting){
             ev.target.classList.add('show')
-        } else{
-            ev.target.classList.remove('show')
         }
     })
 })

@@ -1,6 +1,6 @@
 :root {
     --dark: #323437;
-    --white: #fff;
+    --white: #eeeeee;
     --primaryColor: #FFC100;
     --black: #000000;
     --blue: #476AD2;
@@ -45,14 +45,14 @@ span {
 
 .hidden{
     opacity: 0;
-    transform: scale(0.96);
-    transition: all 1.2s;
+    transform: translateY(50%);
+    transition: all 0.9s;
 }
 
 .show{
     opacity: 1;
-    transform: scale(1);
-    transition: all 1.2s;
+    transform: translateY(0);
+    transition: all 0.9s;
 }
 
 .error {
