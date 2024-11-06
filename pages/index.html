@@ -20,7 +20,7 @@
         <p>Desculpe, estamos trabalhando nisso ainda!</p>
     </div>
     <header>
-        <a href="#">
+        <a href="#" class="anchors">
             <div id="logo">
                 <img src="../images/logo.png" id="logo-img">
                 <div id="logo-text">
@@ -32,10 +32,10 @@
         
         <nav class="nav">
             <ul class="ulNav">
-                <a href=""><li>sobre</li></a>
-                <a href=""><li>jogos</li></a>
-                <a href=""><li>suporte</li></a>
-                <a href=""><li>sugestões</li></a>
+                <a href="#" class="anchors"><li>sobre</li></a>
+                <a href="#" class="anchors"><li>jogos</li></a>
+                <a href="#" class="anchors"><li>suporte</li></a>
+                <a href="#" class="anchors"><li>sugestões</li></a>
             </ul>
         </nav>
         <input type="checkbox" id="checkbox">
@@ -46,11 +46,9 @@
         </label>
     </header>
 
-
     <!-- !Banner Inicial -->
     <section id="section-banner">
         <div class="container-imagem-banner-inicial">
-
         </div>
         <div class="container-texto-banner-inicial">
             <div class="textos-banner">
@@ -63,13 +61,14 @@
 
     <main>
         <h1 id="tituloJogos">JOGOS</h1>
+        
         <!-- !Jogo das palavras -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerTextoJogos">
                 <div class="containerSecundarioTextoJogos">
                     <h1>Jogo das Palavras</h1>
                     <p>Descubre a palavra escondida em 6 tentativas!</p>
-                    <input type="button" value="Jogar" class="btnJogos">
+                    <a class="btnJogos" href="../pages/palavra.html">Jogar</a>
                 </div>
             </div>
             <div class="containerLogoJogos jogoPalavras">
@@ -78,7 +77,7 @@
         </div>
 
         <!-- !Jogo da Velha -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerLogoJogos jogoVelha">
                 
             </div>
@@ -86,18 +85,18 @@
                 <div class="containerSecundarioTextoJogos leftTexto">
                     <h1>Jogo da Velha</h1>
                     <p>Complete uma linha de 3 símbolos e vença o desafio!</p>
-                    <input type="button" value="Jogar" class="btnJogos btnStart">
+                    <a class="btnJogos btnStart" href="../pages/jogodavelha.html">Jogar</a>
                 </div>
             </div>
         </div>
 
         <!-- !Jogo Pedra Papel Tesoura -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerTextoJogos">
                 <div class="containerSecundarioTextoJogos">
                     <h1>Pedra, Papel ou Tesoura</h1>
                     <p>Escolha entre pedra, papel ou tesoura e vença o adversário!</p>
-                    <input type="button" value="Jogar" class="btnJogos">
+                    <a class="btnJogos" href="../pages/jokenpo.html">Jogar</a>
                 </div>
             </div>
             <div class="containerLogoJogos pedraPapelTesoura">
@@ -106,7 +105,7 @@
         </div>
 
         <!-- !Jogo da Memória -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerLogoJogos jogoMemoria">
                 
             </div>
@@ -114,18 +113,18 @@
                 <div class="containerSecundarioTextoJogos leftTexto">
                     <h1>Jogo da Memória</h1>
                     <p>Encontre todos os pares de cartas iguais no menor tempo possível!</p>
-                    <input type="button" value="Jogar" class="btnJogos btnStart">
+                    <a class="btnJogos btnStart" href="../pages/memoria.html">Jogar</a>
                 </div>
             </div>
         </div>
 
         <!-- !Jogo de Digitação -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerTextoJogos">
                 <div class="containerSecundarioTextoJogos">
                     <h1>Speed Type</h1>
                     <p>Teste sua velocidade de digitação!</p>
-                    <input type="button" value="Jogar" class="btnJogos">
+                    <a class="btnJogos" href="../pages/typeracer.html">Jogar</a>
                 </div>
             </div>
             <div class="containerLogoJogos jogoDigitacao">
@@ -134,7 +133,7 @@
         </div>
 
         <!-- !Teste de clique -->
-        <div class="containerJogos">
+        <div class="containerJogos hidden">
             <div class="containerLogoJogos jogoClique">
                 
             </div>
@@ -142,7 +141,7 @@
                 <div class="containerSecundarioTextoJogos leftTexto">
                     <h1>Click Test</h1>
                     <p>Teste sua rapidez nos cliques e quebre seus próprios recordes!</p>
-                    <input type="button" value="Jogar" class="btnJogos btnStart">
+                    <a class="btnJogos btnStart" href="../pages">Jogar</a>
                 </div>
             </div>
         </div>
@@ -152,42 +151,45 @@
     <img src="../images/sun.png" id="theme-switch"><img>
     <footer>
         <div class="container-footer">
-            <div class="logo-footer-container">
+            <div class="logo-footer-container hidden">
                 <p>CLICK<span>PLAY</span></p>
             </div>
-            <div class="nav-footer-container">
+            <div class="nav-footer-container hidden">
                 <ul>
-                    <a href="#"><li>Publicação</li></a>
-                    <a href="#"><li>Nossa história</li></a>
-                    <a href="#"><li>Jogos</li></a>
-                    <a href="#"><li>Apoiar</li></a>
-                    <a href="#"><li>Carreiras</li></a>
-                    <a href="#"><li>Sugestões</li></a>
+                    <a href="#" class="anchors"><li>Publicação</li></a>
+                    <a href="#" class="anchors"><li>Nossa história</li></a>
+                    <a href="#" class="anchors"><li>Jogos</li></a>
+                    <a href="#" class="anchors"><li>Apoiar</li></a>
+                    <a href="#" class="anchors"><li>Carreiras</li></a>
+                    <a href="#" class="anchors"><li>Sugestões</li></a>
                 </ul>
             </div>
 
-            <div class="social-footer-container">
+            <div class="social-footer-container hidden">
                 <ul>
-                    <a href="#"><li><img src="../images/icos/twitter.svg" class="redes-sociais"></li></a>
-                    <a href="#"><li><img src="../images/icos/facebook.svg" class="redes-sociais"></li></a>
-                    <a href="#"><li><img src="../images/icos/youtube.svg" class="redes-sociais"></li></a>
-                    <a href="#"><li><img src="../images/icos/linkedin.svg" class="redes-sociais"></li></a>
-                    <a href="#"><li><img src="../images/icos/instagram.svg" class="redes-sociais"></li></a>
-                    <a href="#"><li><img src="../images/icos/apple.svg" class="redes-sociais"></li></a>
-                    <a href="#"><li><img src="../images/icos/googleplay.svg" class="redes-sociais"></li></a>
-                    <a href="#"><li><img src="../images/icos/github.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/twitter.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/facebook.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/youtube.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/linkedin.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/instagram.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/apple.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/googleplay.svg" class="redes-sociais"></li></a>
+                    <a href="#" class="anchors"><li><img src="../images/icos/github.svg" class="redes-sociais"></li></a>
                 </ul>
             </div>
 
-            <div class="terms-footer-container">
+            <div class="terms-footer-container hidden">
                 <ul>
-                    <a href="#"><li>Termos e Condições</li></a>
-                    <a href="#"><li>Política de Privacidade</li></a>
-                    <a href="#"><li>Política de Conteúdo e Conduta</li></a>
-                    <a href="#"><li>Política de Privacidade para Desenvolvedores</li></a>
-                    <a href="#"><li>Política de Cookies</li></a>
-                    <a href="#"><li>Configurações de Privacidade</li></a>
+                    <a href="#" class="anchors"><li>Termos e Condições</li></a>
+                    <a href="#" class="anchors"><li>Política de Privacidade</li></a>
+                    <a href="#" class="anchors"><li>Política de Conteúdo e Conduta</li></a>
+                    <a href="#" class="anchors"><li>Política de Privacidade para Desenvolvedores</li></a>
+                    <a href="#" class="anchors"><li>Política de Cookies</li></a>
+                    <a href="#" class="anchors"><li>Configurações de Privacidade</li></a>
                 </ul>
+            </div>
+            <div class="copy-footer-container">
+                <p>ClickPlay © 2024 - Todos direitos reservados</p>
             </div>
         </div>
     </footer>

@@ -97,6 +97,9 @@
 }
 
 .btnJogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     right: 0;
     width: 160px;
@@ -169,7 +172,6 @@
 
     .btnJogos{
         position: relative;
-        display: block;
     }
 }
 

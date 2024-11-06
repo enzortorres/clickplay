@@ -36,7 +36,7 @@ elements.forEach((elements) => observador.observe(elements))
 
 
 //!Alerta ao clicar em alguma âncora
-const anchors = document.querySelectorAll('a');
+const anchors = document.querySelectorAll('.anchors');
 const errorMessage = document.querySelector('.error');
 
 anchors.forEach(anchor => {
