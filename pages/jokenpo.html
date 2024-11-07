@@ -17,21 +17,45 @@
         <img src="../images/icos/error.png" alt="">
         <p>Desculpe, estamos trabalhando nisso ainda!</p>
     </div>
-    
+
     <!--! Header -->
-    <header>
+    <header class="header">
         <a href="index.html"><img src="../images/icos/return.png" id="return"></a>
         <a href=""><img src="../images/icos/restart.png" id="reset"></a>
-        <a href=""><img src="../images/icos/help.png" id="help"></a>
     </header>
 
     <!-- !Main -->
     <main>
-        <img src="../images/logo.png" alt="">
-        <img src="../images/logo.png" alt="">
-        <img src="../images/logo.png" alt="">
+        <div class="score-board">
+            <p class="player-text">PLAYER</p>
+            <p class="enemy-text">BOT</p>
+            <div id="player-score">0</div>
+            <p>:</p>
+            <div id="enemy-score">0</div>
+        </div>
+
+        <div class="move-container">
+            <div class="movePlayer"><img src="../images/icos/jokenpo/pedraPlayer.png" id="choicePlayer"></div>
+            <div class="moveEnemy"><img src="../images/icos/jokenpo/pedraInimigo.png" id="choiceEnemy"></div>
+        </div>
+        <p id="resultText">Escolha sua jogada!</p>
+        <div class="options">
+            <div class="option-container">
+                <img src="../images/icos/jokenpo/pedra.png" class="option" data-option="pedra" data-selected="false">
+                <p>Pedra</p>
+            </div>
+            <div class="option-container">
+                <img src="../images/icos/jokenpo/papel.png" class="option" data-option="papel" data-selected="false">
+                <p>Papel</p>
+            </div>
+            <div class="option-container">
+                <img src="../images/icos/jokenpo/tesoura.png" class="option" data-option="tesoura" data-selected="false">
+                <p>Tesoura</p>
+            </div>
+        </div>
     </main>
 
-    <script src="../javascript/main.js"></script>
+    <script src="../javascript/switchTheme.js"></script>
+    <script src="../javascript/jokenpo.js"></script>
 </body>
 </html>

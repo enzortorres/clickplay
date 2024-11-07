@@ -28,7 +28,7 @@
 }
 
 .header{
-    max-width: 1400px;
+    max-width: 1600px;
     height: 100px;
     margin: auto;
     position: relative;
@@ -45,14 +45,9 @@ header a img {
     left: 20px;
 }
 
-#help {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
 
 #reset {
     position: absolute;
     top: 20px;
-    right: 80px;
+    right: 20px;
 }
