@@ -17,6 +17,9 @@
 .bodyCarregamento{
     background-color: #476ad2;
     color: var(--white);
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
 a{
@@ -26,7 +29,6 @@ a{
 
 .containerPrincipalCarregamento{
     width: 90vw;
-    height: 80vh;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -68,6 +70,9 @@ a{
 
 .btnJogarCarregamento{
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .containerCarregamento{
