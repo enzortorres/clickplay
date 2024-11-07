@@ -35,7 +35,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 70vh;
+    height: 80vh
 }
 
 .score-board {
@@ -85,14 +85,14 @@ main {
 }
 .move-container img {
     height: 150px;
-    padding: 20px;
+    padding: 25px;
 }
 
 
 #resultText {
+    padding: 20px;
     font-size: 20px;
     height: fit-content;
-    padding: 10px;
     color: var(--colorSecondary);
 }
 
