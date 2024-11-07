@@ -4,6 +4,8 @@ const checkbox = document.getElementById('checkbox');
 checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
         nav.classList.toggle('active');
+    } else{
+        nav.classList.toggle('active');
     }
 });
 
