@@ -55,13 +55,19 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    animation: animFw 3s linear;
+    animation: animFw 3s ease-out;
     animation-fill-mode: forwards;
   }
   
   @keyframes animFw {
     0% {
       width: 0;
+    }
+    10%{
+      width: 0;
+    }
+    70%{
+      width: 85%;
     }
     100% {
       width: 100%;
