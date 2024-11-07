@@ -9,11 +9,11 @@ const options = ["pedra", "papel", "tesoura"]
 const playerOptions = document.querySelectorAll('.option');
 let playerPoints = 0;
 let enemyPoints = 0;
-let isPlaying = false; // Controla se uma jogada está em andamento
+let isPlaying = false;
 
 playerOptions.forEach((option) => {
     option.onclick = () => {
-        if (isPlaying) return; // Impede outra jogada enquanto uma está em andamento
+        if (isPlaying) return;
         isPlaying = true;
 
         imgChoicePlayer.src = "../images/icos/jokenpo/pedraPlayer.png";
@@ -28,7 +28,6 @@ playerOptions.forEach((option) => {
         const movePlayer = option.getAttribute("data-option");
         const moveEnemy = choiceEnemy();
 
-        // Aguardar a animação terminar antes de mostrar o resultado
         imgChoicePlayer.addEventListener("animationend", () => {
             result(movePlayer, moveEnemy);
             isPlaying = false;
@@ -60,7 +59,7 @@ const result = (movePlayer, moveEnemy) => {
         resultText.textContent = "Você perdeu essa rodada!";
         enemyPoints++;
     }
-
+    clearOptions(playerOptions);
     playerScore.textContent = playerPoints;
     enemyScore.textContent = enemyPoints;
 };
