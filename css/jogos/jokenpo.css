@@ -1,5 +1,159 @@
+@font-face {
+    font-family: 'Digital';
+    src: url('/fonts/alarm-clock.ttf') format('truetype');
+}
+
+* {
+    overflow: hidden;
+}
+
+:root {
+    --dark: #323437;
+    --white: #fff;
+    --primaryColor: #FFC100;
+    --black: #000000;
+    --blue: #476AD2;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --bgSecondary: var(--dark);
+    --color: var(--white);
+    --colorSecondary: var(--black);
+}
+
+.dark-theme {
+    --bg: var(--dark);
+    --bgSecondary: #fffff1;
+    --color: var(--black);
+    --colorSecondary: var(--white);
+}
+
+
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.score-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+    background: var(--bgSecondary);
+    border-radius: 5px;
+    font-size: 120px;
+    padding: 30px;
+    color: var(--color);
+    font-family: 'Digital';
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.player-text {
+    font-size: 24px;
+    color: var(--primaryColor);
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    text-shadow: 1px 1px 0px black;
+}
+
+.enemy-text {
+    font-size: 24px;
+    color: red;
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    text-shadow: 1px 1px 0px black;
+
+}
+
+.move-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    overflow: hidden;
+    height: 300px;
+}
+.move-container img {
+    height: 150px;
+    padding: 20px;
+}
+
+
+#resultText {
+    font-size: 20px;
+    height: fit-content;
+    padding: 10px;
+    color: var(--colorSecondary);
+}
+
+.option-container {
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 275px;
+    gap: 25px;
+    color: var(--colorSecondary);
+}
+
+.option {
+    width: 75px;
+    height: 80%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.option:hover {
+    opacity: 1;
+}
+
+.movePlayer {
+    animation: shakePlayer 1s infinite;
+    transform: rotate(10deg);
+}
+
+.moveEnemy {
+    animation: shakeEnemy 1s infinite;
+    transform: rotate(-10deg);
+}
+
+@keyframes shakePlayer {
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes shakeEnemy {
+    50% {
+        transform: rotate(-20deg);
+    }
+}
+
+@media (max-width: 800px) {
+    .score-board {
+        width: 80%;
+        gap: 5%;
+    }
+
+    .player-text {
+        font-size: 16px;
+    }
+
+    .enemy-text {
+        font-size: 16px;
+    }
 }
