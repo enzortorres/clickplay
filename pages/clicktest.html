@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/jogos/mainJogos.css">
-    <link rel="stylesheet" href="../css/jogos/jokenpon.css">
+    <link rel="stylesheet" href="../css/jogos/clicktest.css">
     <title>ClickPlay</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -24,10 +24,51 @@
     </header>
 
     <!-- !Main -->
-    <main>
+    <main class="main">
+        <div class="container-main">
+            <div id="timer-container">
+                <div id="timer">
+                    <div class="segundos">00</div>
+                    :
+                    <div class="mlsegundos">00</div>
+                </div>
+                <p>Timer</p>
+            </div>
+            <button id="btn">Clique aqui</button>
+            <div class="res-container">
+                <p id="res">0</p>
+                <p>Cliques</p>
+            </div>
+        </div>
+        <div id="mediaClicks">
+            EMPTY
+        </div>
 
+        <div id="radio-container">
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="1">
+                <p>1s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="5">
+                <p>5s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="10" checked>
+                <p>10s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="15">
+                <p>15s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="30">
+                <p>30s</p>
+            </span>
+        </div>
     </main>
 
-    <script src="../javascript/main.js"></script>
+    <script src="../javascript/switchTheme.js"></script>
+    <script src="../javascript/clicktest.js"></script>
 </body>
 </html>

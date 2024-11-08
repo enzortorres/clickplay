@@ -40,7 +40,7 @@ body {
     height: 35px;
 }
 
-span {
+.logo-span {
     color: var(--primaryColor);
 }
 

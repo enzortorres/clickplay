@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+:root {
+    --dark: #323437;
+    --white: #fff;
+    --primaryColor: #FFC100;
+    --black: #000;
+    --blueCarregamento: #476ad2;
+    --secundaryBlue: #22409aad;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --secondaryBg: var(--dark);
+    --color: var(--black);
+    --secondaryColor: var(--white);
+    --radioPrimaryColor : var(--primaryColor);
+    --radioSecondaryColor : var(--dark);
+}
+
+.dark-theme {
+    --bg: var(--dark);
+    --secondaryBg: #fffff1;
+    --color: var(--white);
+    --secondaryColor: var(--black);
+    --radioPrimaryColor : var(--dark);
+    --radioSecondaryColor : var(--primaryColor);
+}
+
+* {
+    color: var(--color);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    user-select: none;
+    font-family: 'Passion One';
+}
+
+#btn {
+    cursor: pointer;
+    width: 25vw;
+    height: 25vw;  
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--secondaryBg);
+    color: var(--secondaryColor);
+    transition: all 0.1s;
+    font-size: 2rem;
+    font-family: 'Passion One';
+}
+
+.res-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+#res {
+    font-size: 40px;
+    box-sizing: border-box;
+}
+
+#mediaClicks {
+    opacity: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+#timer {
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.segundoOption {
+    appearance: none;
+    border: none;
+    outline: none;
+
+    background: var(--radioSecondaryColor);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+#radio-container {
+    display: flex;
+    gap: 30px;
+}
+
+.radio-span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.segundoOption::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.segundoOption:checked::after {
+    background-color: var(--radioPrimaryColor);
+}
+
+
+@media (max-width: 940px) {
+    #btn {
+        width: 200px;
+        height: 200px;
+    }
+    .container-main {
+        gap: 10px;
+    }
+}
