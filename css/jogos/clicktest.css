@@ -55,6 +55,15 @@
     font-family: 'Passion One';
 }
 
+.btnClique.active{
+    animation: mudarcor 0.3s;
+}
+
+@keyframes mudarcor{
+    0%{background-color: grey;}
+    100%{background-color: white;}
+}
+
 .res-container {
     display: flex;
     flex-direction: column;

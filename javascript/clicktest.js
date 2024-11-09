@@ -22,6 +22,10 @@ btn.addEventListener('click', () => {
     }
     clicks++;
     res.innerText = clicks;
+    btn.classList.add("active")
+    setTimeout(() => {
+        btn.classList.remove("active");
+    }, 50);
 });
 
 function startTimer() {
