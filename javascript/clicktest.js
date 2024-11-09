@@ -88,6 +88,7 @@ function endTimer() {
         event.preventDefault();
     };
     telaResultado.classList.add('resultadoAparecer')
+    btn.style.cursor = 'default'
 
     radioButtons.forEach(radio => {
         radio.addEventListener('click', clickHandler);
@@ -101,21 +102,8 @@ function endTimer() {
         radioButtons.forEach(radio => {
             radio.removeEventListener('click', startClickHandler)
         })
+        btn.disabled = false
+        btn.style.cursor = 'pointer'
     })
 
-    setTimeout(() =>{
-        btn.style.cursor = 'pointer'
-        btn.disabled = false
-        btn.addEventListener('click', () => {
-            if (!isRunning) {
-                startTimer();
-                isRunning = true;
-            }
-            res.innerText = clicksResults;
-            btn.classList.add("active")
-            setTimeout(() => {
-                btn.classList.remove("active");
-            }, 50);
-        });
-    }, 1000)
 }
