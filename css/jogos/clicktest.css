@@ -173,6 +173,7 @@
     background-color: var(--blueCarregamento);
     font-family: Arial, Helvetica, sans-serif;
     padding: 50px;
+    display: none;
 }
 
 .seudesempenho{

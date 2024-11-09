@@ -1,7 +1,7 @@
 var clicks = 0;
 const btn = document.getElementById('btn');
 const res = document.getElementById('res');
-const resMedia = document.getElementById('mediaClicks');
+const resMedia = document.querySelector('.cps')
 const segundosEl = document.querySelector('.segundos');
 const mlsegundosEl = document.querySelector('.mlsegundos');
 const radioButtons = document.querySelectorAll('.segundoOption');
@@ -42,6 +42,7 @@ function startTimer() {
 
         if (elapsedTime >= selectedTime) {
             endTimer();
+            clicks = 0
         }
     }, 10);
 }
@@ -53,7 +54,7 @@ function endTimer() {
     btn.disabled = true;
     btn.style.cursor = 'default'
     resMedia.style.opacity = "1";
-    resMedia.textContent = `Cliques por segundo: ${media.toFixed(1)}`;
+    resMedia.textContent = `${media.toFixed(1)}`;
     setTimeout(() =>{
         btn.style.cursor = 'pointer'
         btn.innerHTML = 'Clique novamente'
@@ -63,7 +64,6 @@ function endTimer() {
                 startTimer();
                 isRunning = true;
             }
-            clicks++;
             res.innerText = clicks;
             btn.classList.add("active")
             setTimeout(() => {
