@@ -12,21 +12,23 @@
 </head>
 <body class="light-theme">
 
-    <img src="../images/sun.png" id="theme-switch"><img>
-    <div class="error">
-        <img src="../images/icos/error.png" alt="">
-        <p>Desculpe, estamos trabalhando nisso ainda!</p>
-    </div>
-
     <header>
         <a href="index.html"><img src="../images/icos/return.png" id="return"></a>
-        <a href=""><img src="../images/icos/restart.png" id="reset"></a>
     </header>
 
     <!-- !Main -->
     <main class="mainJogoVelha">
-        <h1>JOGO DA VELHA</h1>
-    <hr />
+        <div class="headerJogoVelha">
+            <div class="XeO">
+                <span class="xgreen">X</span><span class="oyellow"> O</span>
+            </div>
+            <div class="btnVez">
+                <span class="currentPlayer">X</span> VEZ
+            </div>
+            <div class="btnrestart">
+                <img src="../images/icos/returnjogovelha.png" width="15px">
+            </div>
+        </div>
         <div class="game">
             <button data-i="1"></button>
             <button data-i="2"></button>
@@ -38,7 +40,11 @@
             <button data-i="8"></button>
             <button data-i="9"></button>   
         </div>
-        <h2 class="currentPlayer"></h2>
+        <div class="containerContador">
+            <div class="btnContador vitoriaX">X<br><span class="contador contadorVitoria">0</span></div>
+            <div class="btnContador empate">EMPATE<br><span class="contador contadorEmpate">0</span></div>
+            <div class="btnContador vitoriaO">O <span class="contador contadorDerrota">0</span></div>
+        </div>
     </main>
 
     <script src="../javascript/jogodavelha.js"></script>

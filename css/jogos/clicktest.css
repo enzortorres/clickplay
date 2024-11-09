@@ -43,8 +43,8 @@
 
 #btn {
     cursor: pointer;
-    width: 25vw;
-    height: 25vw;  
+    width: 300px;
+    height: 300px;  
     border-radius: 50%;
     border: none;
     outline: none;
@@ -145,5 +145,12 @@
     }
     .container-main {
         gap: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+    #btn {
+        width: 150px;
+        height: 150px;
     }
 }

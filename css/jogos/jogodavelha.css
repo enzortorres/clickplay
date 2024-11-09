@@ -1,45 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: cursive;
-  }
+}
   
-  body {
+body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f7f7f7;
-  }
+    background: #192A32;
+}
   
-  main {
+main {
     display: flex;
     flex-direction: column;
     gap: 5px;
-  }
+}
+
+.headerJogoVelha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 5px;
+}
   
-  h1 {
-    text-align: center;
-  }
+.btnrestart{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #A8BEC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:  0 4px 0 #627c89;
+    transition: all 0.3s;
+}
+.btnrestart:active{
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #A8BEC9;
+}
+
+.currentPlayer{
+    font-size: 1.5em;
+}
   
-  hr {
+
+.btnVez{
+    width: 90px;
+    height: 35px;
+    background: #1F3540;
+    color: #A8BEC9;
     font-weight: bold;
-    height: 3px;
-    background: black;
-    margin-bottom: 10px;
-  }
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+    box-shadow: 8px 0 8px 0 #12222B;
+}
   
-  .game {
+.XeO{
+    width: 70px;
+    font-size: 2.2em;
+    font-weight: bold;
+    font-family: "Lilita One", sans-serif;
+}
+.xgreen{
+    color: #31C4BE;
+}
+.oyellow{
+    color: #F3B13C;
+}
+
+.game {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
+    background-image: url(../../images/hashtagjogovelha.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
   
-  .game button {
+.game button {
     width: 100px;
     height: 100px;
     margin: 5px;
     cursor: pointer;
-    font-size: 50px;
-    background: #f7f7f7;
-  }
+    font-size: 70px;
+    background-color: transparent;
+    border: 0px;
+    opacity: 1;
+    color: #31C4BE;
+    font-weight: bold;
+    position: relative;
+}
+
+.game button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    font-size: 70px;
+}
+
+.game button.hover-x::before {
+    content: "X";
+    color: #31C4BE;
+}
+
+.game button.hover-o::before {
+    content: "O";
+    color: #F3B13C;
+}
+
+.game button:hover::before {
+    opacity: 0.2;
+}
+
+.containerContador{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btnContador{
+    width: 85px;
+    height: 60px;
+    border-radius: 5px;
+    color: #192C35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    flex-direction: column;
+    font-weight: 500;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+.vitoriaX{
+    background-color: #31C4BE;
+}
+
+.contador{
+    font-size: 20px;
+    overflow: hidden;
+    font-weight: 300;
+    font-family: "Lilita One", serif;
+}
+
+.empate{
+    background-color: #A8BEC9;
+}
+
+.vitoriaO{
+    background-color: #F3B13C;
+}
