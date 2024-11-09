@@ -9,6 +9,7 @@ var selectedTime = 10000;
 var timerInterval;
 var isRunning = false;
 
+
 radioButtons.forEach(radio => {
     radio.addEventListener('change', () => {
         selectedTime = parseInt(radio.dataset.value) * 1000;
@@ -53,4 +54,21 @@ function endTimer() {
     btn.style.cursor = 'default'
     resMedia.style.opacity = "1";
     resMedia.textContent = `Cliques por segundo: ${media.toFixed(1)}`;
+    setTimeout(() =>{
+        btn.style.cursor = 'pointer'
+        btn.innerHTML = 'Clique novamente'
+        btn.disabled = false
+        btn.addEventListener('click', () => {
+            if (!isRunning) {
+                startTimer();
+                isRunning = true;
+            }
+            clicks++;
+            res.innerText = clicks;
+            btn.classList.add("active")
+            setTimeout(() => {
+                btn.classList.remove("active");
+            }, 50);
+        });
+    }, 1000)
 }

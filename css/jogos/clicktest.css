@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 :root {
     --dark: #323437;
@@ -39,6 +40,7 @@
     height: 80vh;
     user-select: none;
     font-family: 'Passion One';
+    position: relative;
 }
 
 #btn {
@@ -146,7 +148,6 @@
     background-color: var(--radioPrimaryColor);
 }
 
-
 @media (max-width: 940px) {
     #btn {
         width: 200px;
@@ -162,4 +163,29 @@
         width: 150px;
         height: 150px;
     }
+}
+
+.telaResultado{
+    border: 3px solid white;
+    border-radius: 20px;
+    position: absolute;
+    text-align: center;
+    background-color: var(--blueCarregamento);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+}
+
+.seudesempenho{
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.fechar{
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    font-size: 2em;
+    font-family: "Permanent Marker", cursive;
 }
