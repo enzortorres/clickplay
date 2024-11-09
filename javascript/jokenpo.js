@@ -48,15 +48,18 @@ const result = (movePlayer, moveEnemy) => {
 
     if (movePlayer === moveEnemy) {
         resultText.textContent = "Você empatou essa rodada!";
+        resultText.style.color = "var(--primaryColor)"
     } else if (
         (movePlayer === "pedra" && moveEnemy === "tesoura") ||
         (movePlayer === "papel" && moveEnemy === "pedra") ||
         (movePlayer === "tesoura" && moveEnemy === "papel")
     ) {
         resultText.textContent = "Você ganhou essa rodada!";
+        resultText.style.color = "green"
         playerPoints++;
     } else {
         resultText.textContent = "Você perdeu essa rodada!";
+        resultText.style.color = "red"
         enemyPoints++;
     }
     clearOptions(playerOptions);

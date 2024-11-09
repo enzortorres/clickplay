@@ -91,9 +91,10 @@ main {
 
 #resultText {
     padding: 20px;
-    font-size: 20px;
+    font-size: 26px;
     height: fit-content;
     color: var(--colorSecondary);
+    text-shadow: 2px 1px 0px black;
 }
 
 .option-container {
