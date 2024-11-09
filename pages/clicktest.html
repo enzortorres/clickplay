@@ -10,9 +10,7 @@
     <title>ClickPlay</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="light-theme">
-
-    <img src="../images/sun.png" id="theme-switch"><img>
+<body class="dark-theme">
     <div class="error">
         <img src="../images/icos/error.png" alt="">
         <p>Desculpe, estamos trabalhando nisso ainda!</p>
@@ -29,15 +27,15 @@
             <h1 class="seudesempenho">Seu desempenho</h1>
             <img src="../images/cincoestrelas.png" class="imgEstrela" width="150">
             <p class="textoMedia">Sua média de cliques foi <span style="font-size: 2em;" class="cps">0</span> CPS</p>
-            <p><strong>21 cliques</strong> em <strong>5 segundos</strong></p>
+            <p><strong><span class="qtdCliques">21</span> cliques</strong> em <strong><span class="segundosDesempenho"></span> segundos</strong></p>
             <div class="fechar">X</div>
         </div>
         <div class="container-main">
             <div id="timer-container">
                 <div id="timer">
-                    <div class="segundos">00</div>
+                    <div class="segundosMain">00</div>
                     :
-                    <div class="mlsegundos">00</div>
+                    <div class="mlsegundosMain">00</div>
                 </div>
                 <p>Timer</p>
             </div>
@@ -75,7 +73,6 @@
         </div>
     </main>
 
-    <script src="../javascript/switchTheme.js"></script>
     <script src="../javascript/clicktest.js"></script>
 </body>
 </html>

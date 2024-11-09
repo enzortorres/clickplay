@@ -10,15 +10,6 @@
     --secundaryBlue: #22409aad;
 }
 
-.light-theme {
-    --bg: var(--white);
-    --secondaryBg: var(--dark);
-    --color: var(--black);
-    --secondaryColor: var(--white);
-    --radioPrimaryColor : var(--primaryColor);
-    --radioSecondaryColor : var(--dark);
-}
-
 .dark-theme {
     --bg: var(--dark);
     --secondaryBg: #fffff1;
@@ -41,6 +32,7 @@
     user-select: none;
     font-family: 'Passion One';
     position: relative;
+    padding-top: 100px;
 }
 
 #btn {
@@ -176,6 +168,21 @@
     display: none;
 }
 
+
+.resultadoAparecer{
+    display: block;
+    animation: opacidade 1s;
+    z-index: 1;
+}
+@keyframes opacidade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .seudesempenho{
     font-size: 40px;
     font-weight: 500;
@@ -189,4 +196,10 @@
     right: 20px;
     font-size: 2em;
     font-family: "Permanent Marker", cursive;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.fechar:hover{
+    transform: scale(1.1);
 }
