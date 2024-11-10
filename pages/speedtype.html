@@ -6,14 +6,13 @@
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/jogos/mainJogos.css">
-    <link rel="stylesheet" href="../css/jogos/jokenpon.css">
-    <title>ClickPlay</title>
+    <link rel="stylesheet" href="../css/jogos/speedtype.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>ClickPlay</title>
 </head>
-<body class="light-theme">
+<body class="dark-theme">
 
-    <img src="../images/sun.png" id="theme-switch"><img>
-    <div class="error">
+    <div class="error">randomWord.style.color = 'white';
         <img src="../images/icos/error.png" alt="">
         <p>Desculpe, estamos trabalhando nisso ainda!</p>
     </div>
@@ -21,14 +20,64 @@
     <header>
         <a href="index.html"><img src="../images/icos/return.png" id="return"></a>
         <a href=""><img src="../images/icos/restart.png" id="reset"></a>
-        <a href=""><img src="../images/icos/help.png" id="help"></a>
     </header>
 
     <!-- !Main -->
-    <main>
+    <main class="main">
+        <div id="res">  
+            <header class="header-res">
+                <p>x</p>
+            </header>
+            <main class="main-res">
+                <h1>Seu desempenho</h1>
+                <img src="../images/duasestrelas.png" alt="" id="rating">
+                <p id="res-text">Você digitou 14 palavras em 10 segundos</p>
+                <p>Média de 1.4 palavras por segundo</p>
+            </main>
+        </div>
 
+        <div id="random-word">
+            teste
+        </div>
+
+
+        <input type="text" id="text-input" placeholder="Digite a palavra referenciada" autocomplete="off">
+
+        <div id="timerscore-container">
+            <p id="timer">Tempo restante: 0</p>
+            <p id="score">Pontuação: 0</p>
+        </div>
+
+        <div id="radio-container">
+            <span class="buttons-container">
+                <div class="button">
+                    <input type="radio" name="level" class="levels-buttons" id="level1" data-level="3" data-select="false" checked  >
+                    <label for="level1">
+                        <p class="level-seconds">10s</p>
+                    </label>
+                </div>
+            </span >
+
+            <span class="buttons-container">
+                <div class="button">
+                    <input type="radio" name="level" class="levels-buttons" id="level2" data-level="20" data-select="false">
+                    <label for="level2">
+                        <p class="level-seconds">20s</p>
+                    </label>
+                </div>
+            </span>
+
+            <span class="buttons-container">
+                <div class="button">
+                    <input type="radio" name="level" class="levels-buttons" id="level3" data-level="30" data-select="false">
+                    <label for="level3">
+                        <p class="level-seconds">30s</p>
+                    </label>
+                </div>
+            </span>
+        </div>
     </main>
 
-    <script src="../javascript/main.js"></script>
+    <script src="../javascript/speedtype.js"></script>
 </body>
 </html>

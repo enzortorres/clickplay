@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+    --dark: #323437;
+    --white: #fff;
+    --primaryColor: #FFC100;
+    --black: #000;
+    --blue: #476AD2;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --secondaryBg: var(--dark);
+    --colorHeader: var(--black);
+    --secondaryColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--dark);
+    --secondaryBg: var(--white);
+    --colorHeader: var(--white);
+    --secondaryColor: var(--black);
+}
+
+
+body {
+    height: 100vh;
+}
+
+.main {
+    max-width: 500px;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Lilita One";
+}
+
+#random-word {
+    font-size: 70px;
+    color: var(--white);
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+#text-input {
+    border: none;
+    outline: none;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+#timerscore-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+#radio-container {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons-container {
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+.levels-buttons {
+    appearance: none;
+    width: 100%;
+    height: 50px;
+    background-color: var(--primaryColor);
+    box-shadow: 0 8px 0 #b88a01;
+    transition: all 0.3s;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.levels-buttons:checked {
+    border-radius: 5px;
+    transform: translateY(4px);
+    background-color: #b88a01;
+    box-shadow: 0 0px 0 var(--primaryColor);
+}
+
+.level-seconds {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#res {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--blue);
+    border: 2px solid var(--white);
+    color: var(--white);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    opacity: 1;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.header-res {
+    height: 60px;
+    position: relative;
+}
+
+.header-res p {
+    font-family: 'Permanent Marker';
+    font-size: 2em;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.header-res p:hover {
+    transform: scale(1.2);
+}
+
+.main-res {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#rating {
+    width: 30%;
+}

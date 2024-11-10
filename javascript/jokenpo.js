@@ -6,10 +6,10 @@ const resultText = document.getElementById('resultText');
 const playerOptions = document.querySelectorAll('.option');
 const reset = document.getElementById('reset');
 const options = ["pedra", "papel", "tesoura"];
+let isHoverEnabled = true;
+let isPlaying = false;
 let playerPoints = 0;
 let enemyPoints = 0;
-let isPlaying = false;
-let isHoverEnabled = true;
 
 const enableHoverEffect = () => {
     playerOptions.forEach((option) => {
@@ -47,7 +47,7 @@ playerOptions.forEach((option) => {
         isPlaying = true;
         
         disableHoverEffect();
-
+        
         imgChoicePlayer.src = "../images/icos/jokenpo/pedraPlayer.png";
         imgChoiceEnemy.src = "../images/icos/jokenpo/pedraInimigo.png";
         imgChoicePlayer.style.animation = "shakePlayer 0.3s 3";
