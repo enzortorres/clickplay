@@ -118,10 +118,6 @@ main {
     transition: opacity 0.2s;
 }
 
-.option:hover {
-    opacity: 1;
-}
-
 .movePlayer {
     animation: shakePlayer 1s infinite;
     transform: rotate(10deg);

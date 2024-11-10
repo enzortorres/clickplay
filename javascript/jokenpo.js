@@ -12,6 +12,14 @@ let enemyPoints = 0;
 let isPlaying = false;
 
 playerOptions.forEach((option) => {
+    option.addEventListener('mouseover', () => {
+        option.style.opacity = "1";
+    })
+
+    option.addEventListener('mouseout', () => {
+        option.style.opacity = "0.5";
+    })
+
     option.onclick = () => {
         if (isPlaying) return;
         isPlaying = true;
