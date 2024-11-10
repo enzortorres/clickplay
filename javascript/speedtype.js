@@ -4,6 +4,10 @@ const scoreDisplay = document.getElementById('score');
 const timerDisplay = document.getElementById('timer');
 const radioButtons = document.querySelectorAll('.levels-buttons');
 const resultDisplay = document.getElementById('res');
+const closeButton = document.getElementById('close-res');
+const rating = document.getElementById('rating');
+const resText = document.getElementById('res-text');
+const mediaText = document.getElementById('media-text');
 let playerPoints = 0;
 let isPlaying = false;
 let timeOutTimer;
@@ -72,16 +76,16 @@ input.addEventListener('input', (e) => {
     const currentWord = randomWord.textContent;
 
     if (typedText === currentWord) {
-        playerPoints++;
-        scoreDisplay.textContent = `Pontuação: ${playerPoints}`;
         randomWord.style.color = 'green';
         
         clearTimeout(timeOutTimer);
         timeOutTimer = setTimeout(() => {
+            playerPoints += 1;
+            scoreDisplay.textContent = `Pontuação: ${playerPoints}`;
             input.value = '';
             getRandomWord();
             randomWord.style.color = 'white';
-        }, 500);
+        }, 100);
         
     } else if (typedText.length >= currentWord.length) {
         randomWord.style.color = 'red';
@@ -95,10 +99,46 @@ input.addEventListener('input', (e) => {
 function showResults() {
     clearTimeout(timeOutTimer);
     input.blur();
-    resultDisplay.style.display = 'flex'
+
+    resultDisplay.style.display = 'flex';
     timeOutTimer = setTimeout(() => {
         resultDisplay.style.opacity = '1';
     }, 300)
+    let timeSelected;
+    radioButtons.forEach((button) => {
+        if (button.checked) {
+            timeSelected = parseInt(button.getAttribute('data-level'), 10);
+        }
+    });
+
+    media = playerPoints / timeSelected * 60;
+    resText.innerHTML = `Você digitou <span class="bold">${playerPoints} palavras</span> em <span class="bold">${timeSelected} segundos</span>`;
+    mediaText.innerHTML = `Média de <span class="bold">${media} palavras</span> por minuto`;
+
+    switch(true) {
+        case media < 0.2:
+            rating.setAttribute('src', '../images/umaestrela.png')
+            break;
+        case media < 0.4:
+            rating.setAttribute('src', '../images/duasestrelas.png');
+            break;
+        case media < 0.5:
+            rating.setAttribute('src', '../images/tresestrelas.png');
+            break;
+        case media < 0.6:
+            rating.setAttribute('src', '../images/quatroestrelas.png');
+            break;
+        case media >= 0.7:
+            rating.setAttribute('src', '../images/cincoestrelas.png');
+            break;
+    }
 }
+
+closeButton.addEventListener('click', () => {
+    resultDisplay.style.opacity = '0';
+    timeOutTimer = setTimeout(() => {
+        resultDisplay.style.display = 'none';
+    }, 300);
+});
 
 getRandomWord();

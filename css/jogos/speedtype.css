@@ -37,7 +37,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: "Lilita One";
 }
 
 #random-word {
@@ -45,6 +44,7 @@ body {
     color: var(--white);
     margin-bottom: 30px;
     letter-spacing: 5px;
+    font-family: "Lilita One";
 }
 
 #text-input {
@@ -62,6 +62,7 @@ body {
     align-items: center;
     color: var(--white);
     margin-bottom: 30px;
+    font-family: "Lilita One";
 }
 
 #radio-container {
@@ -74,6 +75,7 @@ body {
     height: 100px;
     overflow: hidden;
     user-select: none;
+    font-family: "Lilita One";
 }
 
 .button {
@@ -106,7 +108,7 @@ body {
 }
 
 #res {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     width: 500px;
@@ -119,7 +121,7 @@ body {
     color: var(--white);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
     border-radius: 20px;
-    opacity: 1;
+    opacity: 0;
     z-index: 100;
     transition: all 0.3s;
 }
@@ -129,8 +131,12 @@ body {
     position: relative;
 }
 
-.header-res p {
+#close-res {
     font-family: 'Permanent Marker';
+    background-color: transparent;
+    color: var(--white);
+    border: 0;
+    outline: 0;
     font-size: 2em;
     position: absolute;
     top: 0px;
@@ -149,6 +155,16 @@ body {
     flex-direction: column;
 }
 
+.main-res h1 {
+    margin-bottom: 15px;
+}
+
 #rating {
     width: 30%;
+    margin-bottom: 30px;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 20px;
 }
