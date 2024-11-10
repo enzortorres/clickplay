@@ -3,26 +3,50 @@ const enemyScore = document.getElementById('enemy-score');
 const imgChoicePlayer = document.getElementById('choicePlayer');
 const imgChoiceEnemy = document.getElementById('choiceEnemy');
 const resultText = document.getElementById('resultText');
-const reset = document.getElementById('reset');
-
-const options = ["pedra", "papel", "tesoura"]
 const playerOptions = document.querySelectorAll('.option');
+const reset = document.getElementById('reset');
+const options = ["pedra", "papel", "tesoura"];
 let playerPoints = 0;
 let enemyPoints = 0;
 let isPlaying = false;
+let isHoverEnabled = true;
+
+const enableHoverEffect = () => {
+    playerOptions.forEach((option) => {
+        option.addEventListener('mouseover', () => {
+            if (isHoverEnabled) {
+                option.style.opacity = "1";
+                option.style.cursor = "pointer";
+            }
+        });
+
+        option.addEventListener('mouseout', () => {
+            if (isHoverEnabled) {
+                option.style.opacity = "0.5";
+            }
+        });
+    });
+};
+
+const disableHoverEffect = () => {
+    isHoverEnabled = false;
+    playerOptions.forEach((option) => {
+        option.style.opacity = "0.5";
+    });
+};
+
+const enableHover = () => {
+    isHoverEnabled = true;
+};
+
+enableHoverEffect();
 
 playerOptions.forEach((option) => {
-    option.addEventListener('mouseover', () => {
-        option.style.opacity = "1";
-    })
-
-    option.addEventListener('mouseout', () => {
-        option.style.opacity = "0.5";
-    })
-
     option.onclick = () => {
         if (isPlaying) return;
         isPlaying = true;
+        
+        disableHoverEffect();
 
         imgChoicePlayer.src = "../images/icos/jokenpo/pedraPlayer.png";
         imgChoiceEnemy.src = "../images/icos/jokenpo/pedraInimigo.png";
@@ -39,9 +63,12 @@ playerOptions.forEach((option) => {
         imgChoicePlayer.addEventListener("animationend", () => {
             result(movePlayer, moveEnemy);
             isPlaying = false;
+            enableHover();
         }, { once: true });
     };
 });
+
+
 
 const choiceEnemy = () => {
     const randomOption = Math.floor(Math.random() * options.length);
