@@ -35,24 +35,16 @@ body{
     position: relative;
 }
 
-.flip {
-    animation: flip 0.6s forwards;
+.reveal {
+    animation: revealLetter 0.6s forwards;
 }
 
-@keyframes flip {
+@keyframes revealLetter {
     0% {
-        transform: rotateY(0deg);
-        background: transparent;
-        color: transparent;
-    }
-    50% {
-        transform: rotateY(90deg);
-        background: transparent;
-        color: transparent;
+        opacity: 0;
     }
     100% {
-        transform: rotateY(180deg);
-        color: white;
+        opacity: 1;
     }
 }
 
@@ -123,4 +115,23 @@ body{
 
 .textoMedia{
     text-transform: none;
+}
+
+@media(max-height:700px){
+    #gameContainer{
+        height: 500px;
+    }
+    .charBox {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width:550px){
+    .charBox{
+        width: 60px;
+        height: 60px;
+        font-size: 0.8em;
+    }
 }

@@ -90,7 +90,8 @@ function checkLetters() {
             } else {
                 charBox.classList.add('empty');
             }
-        }, i * 300)
+            charBox.classList.add('reveal');  // Adiciona a classe de revelação da letra
+        }, i * 300)  // Espera 300ms para cada letra antes de mostrar a próxima
     }
 }
 
@@ -99,15 +100,19 @@ function checkTurn(enteredWord) {
     let gameOver = jogoStatus.linhaJogo === 5;
 
     if (won) {
-        resultado.classList.add('resultadoAparecer');
-        isGameOver = true;
-        desempenho.textContent = 'Parabens'
-        textoResultado.textContent = 'Você acertou a palavra!'
+        setTimeout(() => {
+            resultado.classList.add('resultadoAparecer');
+            isGameOver = true;
+            desempenho.textContent = 'Parabens'
+            textoResultado.textContent = 'Você acertou a palavra!'
+        }, 1500)
     } else if (gameOver) {
-        resultado.classList.add('resultadoAparecer');
-        isGameOver = true;
-        desempenho.textContent = 'Não foi dessa vez'
-        textoResultado.textContent = 'Você errou a palavra: ' + jogoStatus.palavraEscolhida
+        setTimeout(() => {
+            resultado.classList.add('resultadoAparecer');
+            isGameOver = true;
+            desempenho.textContent = 'Não foi dessa vez'
+            textoResultado.textContent = 'Você errou a palavra: ' + jogoStatus.palavraEscolhida
+        }, 1500)
     }
 }
 
