@@ -42,7 +42,7 @@ function keyboardpresses(){
         if(key === 'Enter'){
             let word = getEnteredWord();
             if(word.length < 5){
-                alert('Palavra menor que 5 letras')
+                showError();
             } else{
                 checkLetters()
                 checkTurn(word)
@@ -118,3 +118,15 @@ function deleteLetter(){
 }
 
 init()
+
+
+function showError() {
+    const errorMessage = document.querySelector('.error');
+    let timeoutId;
+
+    errorMessage.style.opacity = '1';
+
+    timeoutId = setTimeout(() => {
+        errorMessage.style.opacity = '0';
+    }, 3000);
+}
