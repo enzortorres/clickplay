@@ -1,7 +1,7 @@
 let desempenho = document.querySelector('.seudesempenho')
 let textoResultado = document.querySelector('.textoResultado')
 
-let wordList = [
+let listaPalavras = [
     "amigo", "dolar", "tempo", "carro", "feira", "olhar", "sorte", "poder", "chave",
     "mundo", "falar", "homem", "chuva", "amado", "sabor", "certo", "sinto", "perto", 
     "beijo", "terra", "viver", "festa", "letra", "justo", "tarde", "banco",
@@ -14,10 +14,10 @@ let resultado = document.querySelector('.telaResultado');
 let fecharBotao = document.querySelector('.fechar');
 
 let jogoStatus = {
-    gameGrid: Array(6).fill().map(() => Array(5).fill('')),
-    currentRow: 0,
-    currentCol: 0,
-    hiddenWord: wordList[Math.floor(Math.random() * wordList.length)]
+    gridJogo: Array(6).fill().map(() => Array(5).fill('')),
+    linhaJogo: 0,
+    colunaJogo: 0,
+    palavraEscolhida: listaPalavras[Math.floor(Math.random() * listaPalavras.length)]
 };
 
 let isGameOver = false;
@@ -26,7 +26,7 @@ function init() {
     const gameContainer = document.getElementById('gameContainer');
     gameContainer.innerHTML = '';
     gridJogo(gameContainer);
-    console.log(jogoStatus.hiddenWord);
+    console.log(jogoStatus.palavraEscolhida);
     teclaApertada();
     isGameOver = false; 
 }
@@ -64,8 +64,8 @@ function teclaApertada() {
             } else {
                 checkLetters();
                 checkTurn(word);
-                jogoStatus.currentRow++;
-                jogoStatus.currentCol = 0;
+                jogoStatus.linhaJogo++;
+                jogoStatus.colunaJogo = 0;
             }
         }
         if (tecla === 'Backspace') {
@@ -80,21 +80,23 @@ function teclaApertada() {
 
 function checkLetters() {
     for (let i = 0; i < 5; i++) {
-        let charBox = document.getElementById('charBox.' + jogoStatus.currentRow + '' + i);
+        let charBox = document.getElementById('charBox.' + jogoStatus.linhaJogo + '' + i);
         let letter = charBox.textContent;
-        if (letter == jogoStatus.hiddenWord[i]) {
-            charBox.classList.add('correct');
-        } else if (jogoStatus.hiddenWord.includes(letter)) {
-            charBox.classList.add('contains');
-        } else {
-            charBox.classList.add('empty');
-        }
+        setTimeout(() => {
+            if (letter == jogoStatus.palavraEscolhida[i]) {
+                charBox.classList.add('correct');
+            } else if (jogoStatus.palavraEscolhida.includes(letter)) {
+                charBox.classList.add('contains');
+            } else {
+                charBox.classList.add('empty');
+            }
+        }, i * 300)
     }
 }
 
 function checkTurn(enteredWord) {
-    let won = jogoStatus.hiddenWord === enteredWord;
-    let gameOver = jogoStatus.currentRow === 5;
+    let won = jogoStatus.palavraEscolhida === enteredWord;
+    let gameOver = jogoStatus.linhaJogo === 5;
 
     if (won) {
         resultado.classList.add('resultadoAparecer');
@@ -105,7 +107,7 @@ function checkTurn(enteredWord) {
         resultado.classList.add('resultadoAparecer');
         isGameOver = true;
         desempenho.textContent = 'Não foi dessa vez'
-        textoResultado.textContent = 'Você errou a palavra: ' + jogoStatus.hiddenWord
+        textoResultado.textContent = 'Você errou a palavra: ' + jogoStatus.palavraEscolhida
     }
 }
 
@@ -115,23 +117,23 @@ fecharBotao.addEventListener('click', () => {
 });
 
 function resetGame() {
-    jogoStatus.hiddenWord = wordList[Math.floor(Math.random() * wordList.length)];
-    jogoStatus.currentRow = 0;
-    jogoStatus.currentCol = 0;
-    jogoStatus.gameGrid = Array(6).fill().map(() => Array(5).fill(''));
-    console.log('Nova palavra gerada: ', jogoStatus.hiddenWord);
+    jogoStatus.palavraEscolhida = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
+    jogoStatus.linhaJogo = 0;
+    jogoStatus.colunaJogo = 0;
+    jogoStatus.gridJogo = Array(6).fill().map(() => Array(5).fill(''));
+    console.log('Nova palavra gerada: ', jogoStatus.palavraEscolhida);
     init();
 }
 
 function getEnteredWord() {
-    return jogoStatus.gameGrid[jogoStatus.currentRow].reduce((previous, current) => previous + current);
+    return jogoStatus.gridJogo[jogoStatus.linhaJogo].reduce((previous, current) => previous + current);
 }
 
 function updateGameGrid() {
-    for (let i = 0; i < jogoStatus.gameGrid.length; i++) {
-        for (let o = 0; o < jogoStatus.gameGrid[i].length; o++) {
+    for (let i = 0; i < jogoStatus.gridJogo.length; i++) {
+        for (let o = 0; o < jogoStatus.gridJogo[i].length; o++) {
             let charBox = document.getElementById('charBox.' + i + '' + o);
-            charBox.textContent = jogoStatus.gameGrid[i][o];
+            charBox.textContent = jogoStatus.gridJogo[i][o];
         }
     }
 }
@@ -141,15 +143,15 @@ function isAlpha(key) {
 }
 
 function addLetter(key) {
-    if (jogoStatus.currentCol === 5) return;
-    jogoStatus.gameGrid[jogoStatus.currentRow][jogoStatus.currentCol] = key;
-    jogoStatus.currentCol++;
+    if (jogoStatus.colunaJogo === 5) return;
+    jogoStatus.gridJogo[jogoStatus.linhaJogo][jogoStatus.colunaJogo] = key;
+    jogoStatus.colunaJogo++;
 }
 
 function deleteLetter() {
-    if (jogoStatus.currentCol === 0) return;
-    jogoStatus.gameGrid[jogoStatus.currentRow][jogoStatus.currentCol - 1] = '';
-    jogoStatus.currentCol--;
+    if (jogoStatus.colunaJogo === 0) return;
+    jogoStatus.gridJogo[jogoStatus.linhaJogo][jogoStatus.colunaJogo - 1] = '';
+    jogoStatus.colunaJogo--;
 }
 
 function showError() {
