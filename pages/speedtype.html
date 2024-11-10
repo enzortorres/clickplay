@@ -24,40 +24,28 @@
 
     <!-- !Main -->
     <main class="main">
-        <div id="res">  
-            <header class="header-res">
-                <p>x</p>
-            </header>
-            <main class="main-res">
-                <h1>Seu desempenho</h1>
-                <img src="../images/duasestrelas.png" alt="" id="rating">
-                <p id="res-text">Você digitou 14 palavras em 10 segundos</p>
-                <p>Média de 1.4 palavras por segundo</p>
-            </main>
-        </div>
-
+        
         <div id="random-word">
             teste
         </div>
-
-
-        <input type="text" id="text-input" placeholder="Digite a palavra referenciada" autocomplete="off">
-
+        
+        <input type="text" id="text-input" placeholder="Digite a palavra referenciada..." autocomplete="off">
+        
         <div id="timerscore-container">
             <p id="timer">Tempo restante: 0</p>
             <p id="score">Pontuação: 0</p>
         </div>
-
+        
         <div id="radio-container">
             <span class="buttons-container">
                 <div class="button">
-                    <input type="radio" name="level" class="levels-buttons" id="level1" data-level="3" data-select="false" checked  >
+                    <input type="radio" name="level" class="levels-buttons" id="level1" data-level="10" data-select="false" checked  >
                     <label for="level1">
                         <p class="level-seconds">10s</p>
                     </label>
                 </div>
             </span >
-
+            
             <span class="buttons-container">
                 <div class="button">
                     <input type="radio" name="level" class="levels-buttons" id="level2" data-level="20" data-select="false">
@@ -77,6 +65,18 @@
             </span>
         </div>
     </main>
+    
+    <div id="res">  
+        <header class="header-res">
+            <button id="close-res">x</button>
+        </header>
+        <main class="main-res">
+            <h1>Seu desempenho</h1>
+            <img src="../images/duasestrelas.png" alt="" id="rating">
+            <p id="res-text">Você digitou <span class="bold">14 palavras</span> em <span class="bold">10 segundos</span></p>
+            <p id="media-text">Média de <span class="bold">1.4 palavras</span> por minuto</p>
+        </main>
+    </div>
 
     <script src="../javascript/speedtype.js"></script>
 </body>
