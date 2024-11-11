@@ -168,3 +168,14 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
+
+@media (max-width: 550px) {
+    .buttons-container {
+        width: 100px;
+    }
+
+    #res {
+        width: 350px;
+        text-align: center;
+    }
+}

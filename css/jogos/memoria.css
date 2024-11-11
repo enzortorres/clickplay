@@ -33,8 +33,8 @@
 
 .wrapper {
     box-sizing: content-box;
-    width: 26.87em;
-    padding: 2.5em 3em;
+    width: 420px;
+    padding: 30px 30px;
     background-color: #ffffff;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -48,7 +48,7 @@
     position: relative;
     width: 100%;
     display: grid;
-    gap: 0.6em;
+    gap: 5px;
 }
 
 .stats-container {
@@ -62,8 +62,8 @@
 
 .card-container {
     position: relative;
-    width: 6.25em;
-    height: 6.25em;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
 }
 
@@ -171,4 +171,25 @@ button {
 
 #close:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 300px;
+    }
+    .card-container {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 350px) {
+    .wrapper {
+        width: 250px;
+    }
+
+    .card-container {
+        width: 59px;
+        height: 59px;
+    }
 }
