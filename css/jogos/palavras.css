@@ -119,7 +119,7 @@ body{
 
 @media(max-height:700px){
     #gameContainer{
-        height: 500px;
+        height: 450px;
     }
     .charBox {
         width: 60px;

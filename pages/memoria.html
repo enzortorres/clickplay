@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Memória</title>
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/jogos/mainJogos.css">
-    <link rel="stylesheet" href="../css/jogos/jokenpon.css">
-    <title>ClickPlay</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/jogos/memoria.css" />
 </head>
-<body class="light-theme">
 
-    <img src="../images/sun.png" id="theme-switch"><img>
-    <div class="error">
-        <img src="../images/icos/error.png" alt="">
-        <p>Desculpe, estamos trabalhando nisso ainda!</p>
-    </div>
-
+<body class="dark-theme">
     <header>
         <a href="index.html"><img src="../images/icos/return.png" id="return"></a>
         <a href=""><img src="../images/icos/restart.png" id="reset"></a>
     </header>
+    <div class="wrapper">
+        <div class="stats-container">
+            <div id="moves-count"></div>
+            <div id="time"><span class="bold">Timer:</span>00:00</div>
+        </div>
+        <div class="game-container"></div>
+        <button id="stop">Stop Game</button>
+    </div>
+    <div class="controls-container">
+    </div>
+    <div id="result">
+        <header class="header-result">
+            <p id="close">x</p>
+        </header>
+        <h1>Desempenho</h1>
+        <p id="result-text">Parabéns, você ganhou com 10 jogadas!</p>
+    </div>
 
-    <!-- !Main -->
-    <main>
-
-    </main>
-
-    <script src="../javascript/main.js"></script>
+    <script src="../javascript/memoria.js"></script>
 </body>
+
 </html>
+
