@@ -116,19 +116,19 @@ function showResults() {
     mediaText.innerHTML = `Média de <span class="bold">${media} palavras</span> por minuto`;
 
     switch(true) {
-        case media < 0.2:
+        case media < 28:
             rating.setAttribute('src', '../images/umaestrela.png')
             break;
-        case media < 0.4:
+        case media < 34:
             rating.setAttribute('src', '../images/duasestrelas.png');
             break;
-        case media < 0.5:
+        case media < 42:
             rating.setAttribute('src', '../images/tresestrelas.png');
             break;
-        case media < 0.6:
+        case media < 49:
             rating.setAttribute('src', '../images/quatroestrelas.png');
             break;
-        case media >= 0.7:
+        case media >= 50:
             rating.setAttribute('src', '../images/cincoestrelas.png');
             break;
     }

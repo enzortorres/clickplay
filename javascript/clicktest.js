@@ -68,19 +68,19 @@ function endTimer() {
     resMedia.style.opacity = "1";
     resMedia.textContent = `${media.toFixed(1)}`;
     switch(true){
-        case (media < 24):             
+        case (media < 3):             
             imgEstrela.setAttribute('src','../images/umaestrela.png')
             break
-        case (media < 30):
+        case (media < 5):
             imgEstrela.setAttribute('src','../images/duasestrelas.png')
             break
-        case (media < 38):
+        case (media < 7):
             imgEstrela.setAttribute('src','../images/tresestrelas.png')
             break
-        case (media < 46):
+        case (media < 10):
             imgEstrela.setAttribute('src','../images/quatroestrelas.png')
             break
-        case (media >= 47):
+        case (media >= 11):
             imgEstrela.setAttribute('src','../images/cincoestrelas.png')
             break
     }
