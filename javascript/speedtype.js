@@ -14,6 +14,10 @@ let timeOutTimer;
 let timerInterval;
 let time;
 
+window.addEventListener('load', () => {
+    input.focus();
+});
+
 function getRandomWord() {
     const randomWords = [
         "casa", "carro", "livro", "mesa", "computador", "porta", "janela", "cadeira", "parede", "telefone",
