@@ -158,6 +158,7 @@ nav ul li:hover{
         justify-content: center;
         gap: 10px;
         transition-duration: .3s;
+        z-index: 1000;
     }
     
     .bars {

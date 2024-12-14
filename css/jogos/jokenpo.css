@@ -91,6 +91,7 @@ main {
 
 #resultText {
     padding: 20px;
+    text-align: center;
     font-size: 26px;
     height: fit-content;
     color: var(--colorSecondary);
@@ -152,5 +153,10 @@ main {
 
     .enemy-text {
         font-size: 16px;
+    }
+
+    a {
+        height: fit-content;
+        width: fit-content;
     }
 }
