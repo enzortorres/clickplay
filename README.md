@@ -3,7 +3,9 @@ ClickPlay is a digital platform that brings together classic games like Rock-Pap
 📌 Features
 
   User-friendly and intuitive interface.
+
   Classic games adapted for the digital environment.
   
 🚀 Try it out
+
   Click, play, and have fun!
